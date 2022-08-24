@@ -11,7 +11,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>sample1</artifactId>
-	<version>0.0.1-SNAPSHOT</version> <!-- log4jのバージョン変える前後でバージョン変えてる 0.0.1-SNAPSHOT -> 0.0.2-SNAPSHOT -->
+	<version>0.0.1-SNAPSHOT</version>
 	<name>sample1</name>
 	<description>JFrog Xrayの動作を確認するサンプルコード</description>
 	<properties>
@@ -41,11 +41,10 @@
 		</dependency>
 
 		<!-- log4j 2.14系は脆弱性あり -->
-		<!-- バージョン情報を削除すると最新取得 = 2.17.2 AsOf 2022/06/17-->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
-			<version>2.14.1</version>  <!-- 脆弱性対応済みの場合はここをコメントアウト -->
+			<version>2.14.1</version>
 		</dependency>
 	</dependencies>
 
