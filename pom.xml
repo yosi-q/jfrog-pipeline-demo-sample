@@ -41,6 +41,7 @@
 		</dependency>
 
 		<!-- log4j 2.14系は脆弱性あり -->
+		<!-- 脆弱性解消: Violationは 2.17.1 で解消済み。2022/08/24時点で最新の 2.17.2 を利用 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
