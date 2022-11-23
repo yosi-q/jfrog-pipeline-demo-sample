@@ -1,7 +1,7 @@
 valuesFilePath: ./values.yml
 
 resources:
-  - name: my_Git_Repository
+  - name: demo_Git_Repository
     type: GitRepo
     configuration:
       gitProvider: pipeline_demo_git
@@ -9,7 +9,7 @@ resources:
       branches:
         include: {{ .Values.gitRepos.branch }}
 
-  - name: mvn_build_info
+  - name: demo_mvn_build_info
     type: BuildInfo
     configuration:
       sourceArtifactory: satoytestingfree
@@ -31,7 +31,7 @@ pipelines:
         integrations:
           - name: satoytestingfree
         inputResources:
-          - name: my_Git_Repository     # Trigger execution on code commit
+          - name: demo_Git_Repository     # Trigger execution on code commit
       execution:
         onStart:
           - echo "Preparing for work..."
@@ -48,7 +48,7 @@ pipelines:
         inputSteps: 
           - name: step_build
         outputResources: 
-          - name: mvn_build_info
+          - name: demo_mvn_build_info
 
     - name: step_final
       type: Bash
