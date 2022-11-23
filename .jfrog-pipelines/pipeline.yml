@@ -5,9 +5,9 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: pipeline_demo_git
-      path: {{ .Values.gitRepos.path }}
+      path: yosi-q/jfrog-pipeline-demo-sample
       branches:
-        include: {{ .Values.gitRepos.branch }}
+        include: master
 
   - name: demo_mvn_build_info
     type: BuildInfo
