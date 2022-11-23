@@ -19,7 +19,7 @@ pipelines:
     configuration:
       jfrogCliVersion: 2
     steps:
-    - name: step_build
+    - name: s1_step_build
       type: MvnBuild
       configuration:
         resolverSnapshotRepo: xraysample
@@ -40,7 +40,7 @@ pipelines:
         onComplete:                                  #always
           - echo "Cleaning up some stuff"
 
-    - name: publish_build_info
+    - name: s2_publish_build_info
       type: PublishBuildInfo
       configuration:
         inputSteps: 
@@ -48,7 +48,7 @@ pipelines:
         outputResources: 
           - name: demo_mvn_build_info
 
-    - name: step_final
+    - name: s3_step_final
       type: Bash
       configuration:
         inputSteps:
